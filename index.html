@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Landing Page 2025</title>
 <meta name="description" content="Experience a modern, lightweight, and accessible landing page with responsive design.">
+<script type="module" src="./com/mv-movie.js"></script>
 <style>
   body { margin:0; font-family: system-ui, sans-serif; line-height:1.5; color:#111; background:#f9f9f9; }
   a { color: inherit; text-decoration:none; }
@@ -123,7 +124,7 @@
   ];
 
   const cardsContainer = document.getElementById('cards-container');
-  cardsContainer.innerHTML = products.map(p => createCard(p.title, p.image, p.description)).join('');
+  cardsContainer.innerHTML = products.map(p => `<mv-movie title="${p.title}"></mv-movie>`).join('');
 </script>
 
 </body>
